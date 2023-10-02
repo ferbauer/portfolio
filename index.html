@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fernanda Adriela Bauer</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+	text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #5555;
+	text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+/* Estilos de projetos */
+	.project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+        }
+            }
+            .project img {
+                max-width: 300px;
+            }
+	    .imagem-container {
+    position: relative;
+    overflow: hidden;
+    width: 300px; /* Largura da imagem container */
+    height: 200px; /* Altura da imagem container */
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagem-container:hover img {
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse sobre ela */
+}
+
+        /* Estilos específicos para cada página */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        /* Estilos do rodapé */
+        footer {
+        background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fernanda Adriela Bauer</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#sobre">Pagina Inicial</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Página Inicial -->
+        <div id="sobre" class="page active">
+            <h2>Bem vindo ao meu portfólio</h2>
+            <p> Obrigado por visitar meu espaço digital, aqui compartilho minha paixão e criatividade com o mundo, convido você a meconhecer um pouco mais e também conhecer as minhas criações.</p>
+                <h2>Quem sou eu?</h2>
+		<img src="Fotografia.jpg" alt="Minha imagem" height="30%" width="30%"> 
+            <p> Eu sou Fernanda, trabalho como recepcionista em um hospital, e com manutenções de computadores e smartphones, estou cursando tecnologo em Radiologia e também expandindo meus conhecimentos na programação com projeto o Elas Na Tech, que conheci através da JA </p>
+            <h2>Currículo</h2>
+            <p>Clique no link abaixo para baixar meu currículo:</p>
+            <a href="Curriculo.pdf" download>Download do Arquivo PDF</a>
+           <h2>Informações de Contato</h2>
+  <p>Endereço: Vergílio Antunes de Souza, nº 108,Bairro Jardim Bela Vista Campos Novos - SC</p>
+  <p>Telefone: (54) 981128263</p>
+  <p>Email: fernanda_bauer@live.com</p>
+               <h2>Redes sociais:</h2>
+            <a href="https://www.facebook.com/Fer.A.Bauer" target="_blank">
+                <img src="Facebook.png" alt="Facebook" height="10%" width="10%">
+            </a>
+              <a href="https://twitter.com/Fer__Bauer" target="_blank">
+                <img src="Twitter.png" alt="Twitter" height="10%" width="10%">
+            </a>
+            <a href="https://www.instagram.com/fer__bauer/" target="_blank">
+                <img src="Instagram.png" alt="Instagram" height="10%" width="10%">
+            </a>
+            <a href="https://www.linkedin.com/in/fernanda-adriela-bauer/" target="_blank">
+                <img src="Linkedin.png" alt="Linkedin" height="10%" width="10%">
+            </a>
+
+        </div>
+        <!-- Página Contato-->
+        <div id="contato" class="page">
+        <h2>Formulário de Contato</h2>
+<form id="contactForm" action="#" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<script>
+    // Função para validar o formulário
+    function validarFormulario() {
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var mensagem = document.getElementById("mensagem").value;
+
+        if (nome === "" || email === "" || mensagem === "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        }
+
+        return true;
+    }
+
+    document.getElementById("contactForm").onsubmit = validarFormulario;
+</script>
+        </div>
+        <!-- Página Projetos -->
+        <div id="projetos" class="page">
+            <h2>Projetos</h2>
+            <div class="project">
+	<h2> Projeto 1</h2>
+     <div class="imagem-container">
+        <img src="projeto1.png" alt="Projeto 1">
+	     </div>
+        <p>Cardápio de lancheria</p>
+        <a href="https://ferbauer.github.io/Cardapio/Cardapio.html">Acesse o Projeto 1</a>
+    </div>
+
+    <div class="project">
+	    <h2> Projeto 2</h2>
+         <div class="imagem-container">
+        <img src="projeto2.png" alt="Projeto 2">
+		 </div>
+        <p>Mulheres Inspiradoras no mundo da tecnologia</p>
+        <a href="https://ferbauer.github.io/MulheresDoTI/MulheresDoTI.html">Acesse o Projeto 2</a>
+    </div>
+
+    <div class="project">
+	    <h2> Projeto 3</h2>
+        <div class="imagem-container">
+        <img src="projeto3.png" alt="Projeto 3">
+		</div>
+         <p>Site ODS - Igualdade de Gênero</p>
+        <a href="https://ferbauer.github.io/igualdadedegenero/igualdadedegenero.html">Acesse o Projeto 3</a>
+		</div>
+        </div>
+	    <script>
+        // Função para alternar entre as páginas
+        function changePage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                if (page.id === pageId) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+        }
+
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPageId = e.target.getAttribute('href').substring(1);
+                changePage(targetPageId);
+            });
+        });
+        // Exiba a primeira página por padrão
+        changePage('sobre');
+    </script>
+    </body>
+	 <footer>
+        <p> criado por Fernanda Adriela Bauer</p>
+	    <p> Elas Na Tech 2023</p>
+    </footer>
+</html>
